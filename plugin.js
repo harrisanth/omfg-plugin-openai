@@ -23,6 +23,6 @@ export const agentMessage = async (args) => {
   //console.log(JSON.stringify({ args }, null, 2));
   return `
     You have sent ${messages.length} message(s) in this conversation.
-    Datetime: new Date().toLocaleString()
+    Datetime: ${new Date().toISOString()}
   `.replace(/    /gm, '').trim();
 };
