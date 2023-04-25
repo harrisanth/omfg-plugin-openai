@@ -18,6 +18,11 @@ export const agentSettings = {
 };
 
 export const agentMessage = async (args) => {
-  console.log(JSON.stringify({ args }, null, 2));
-  return 'I am a bot based on omfg-plugin-openai.  \n\nI am a work in progress.';
+  const { settings, messages, user, apiKey } = args;
+  const messageLength = messages.length;
+  //console.log(JSON.stringify({ args }, null, 2));
+  return `
+    You have sent ${messages.length} message(s) in this conversation.
+    Datetime: new Date().toLocaleString()
+  `.replace(/    /gm, '').trim();
 };
