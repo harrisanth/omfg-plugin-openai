@@ -19,5 +19,5 @@ export const agentSettings = {
 
 export const agentMessage = async (...args) => {
   console.log({ args });
-  return 'I am a bot based on omfg-plugin-openai.  I currently do nothing interesting.';
+  return 'I am a bot based on omfg-plugin-openai.  I currently do nothing interesting. (YET!)';
 };
