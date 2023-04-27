@@ -19,7 +19,7 @@ export const agentSettings = {
 };
 
 
-const getAgent = async ({
+const getAgent = ({
 	initial_prompt = '',
 	initial_message = '',
 	model = 'gpt-3.5-turbo',
