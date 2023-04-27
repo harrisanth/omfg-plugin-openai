@@ -1,4 +1,4 @@
-import { createParser } from 'eventsource-parser';
+import { createParser } from 'https://cdn.jsdelivr.net/npm/eventsource-parser@1.0.0';
 
 export const version = '0.0.3';
 
