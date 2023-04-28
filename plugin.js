@@ -27,7 +27,7 @@ const getAgent = ({
 	presence_penalty = 0,
 	n = 1,
 	stream = true,
-}) => ({
+} = {}) => ({
 	model: model || 'gpt-3.5-turbo',
 	temperature,
 	top_p,
@@ -56,7 +56,7 @@ const getAgent = ({
 
 export const agentMessage = async (args) => {
 	const { settings, messages = [], user, apiKey } = args;
-
+	console.log({ args });
 	const agent = getAgent(settings);
 	const payload = {
 		...agent,
@@ -70,6 +70,7 @@ export const agentMessage = async (args) => {
 		],
 		user,
 	};
+	console.log(JSON.stringify({ agent, payload }, null, 2));
 	const requestHeaders = {
 		'Content-Type': 'application/json',
 		Authorization: `Bearer ${apiKey}`,
