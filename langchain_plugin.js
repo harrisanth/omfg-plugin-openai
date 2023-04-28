@@ -3,7 +3,7 @@ export const version = '0.0.4';
 export const agentSettings = {
 	openAIApiKey: {
 		type: 'input',
-		label: 'SERP API Key',
+		label: 'OpenAI API Key',
 	},
 	serpApiKey: {
 		type: 'input',
